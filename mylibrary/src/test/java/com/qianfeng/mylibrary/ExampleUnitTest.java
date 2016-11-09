@@ -1,4 +1,4 @@
-package com.qianfeng.maotuananimation;
+package com.qianfeng.mylibrary;
 
 import org.junit.Test;
 
