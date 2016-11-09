@@ -1,4 +1,4 @@
-package com.qianfeng.maotuananimation.view.Fragment;
+package com.qianfeng.maotuananimation.Content.view.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.qianfeng.maotuananimation.R;
-import com.qianfeng.maotuananimation.view.Adapter.MyFragmentPagerAdapter;
+import com.qianfeng.maotuananimation.Content.view.Adapter.MyFragmentPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

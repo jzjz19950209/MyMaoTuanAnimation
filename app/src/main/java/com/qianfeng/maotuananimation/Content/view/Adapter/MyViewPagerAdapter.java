@@ -1,4 +1,4 @@
-package com.qianfeng.maotuananimation.view.Adapter;
+package com.qianfeng.maotuananimation.Content.view.Adapter;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

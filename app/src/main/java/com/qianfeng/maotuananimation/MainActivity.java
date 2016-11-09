@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.qianfeng.maotuananimation.view.Fragment.ContentFragment;
+import com.qianfeng.maotuananimation.Content.view.Fragment.ContentFragment;
 
 import java.util.ArrayList;
 import java.util.List;
