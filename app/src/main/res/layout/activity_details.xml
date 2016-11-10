@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qianfeng.maotuananimation.detailacitivity.view.DetailsActivity">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rv"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="网络连接错误"
+        android:textColor="#d42424"
+        android:id="@+id/tv"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="88dp"
+        android:visibility="gone"
+        android:id="@+id/iv"
+        android:src="@drawable/face_button_emoji"
+        android:layout_above="@id/tv"
+        android:layout_centerHorizontal="true"
+        android:layout_height="78dp" />
+    <ImageButton
+        android:id="@+id/ib"
+        android:visibility="gone"
+        android:onClick="btnRefresh"
+        android:layout_width="48dp"
+        android:background="@null"
+        android:src="@drawable/data_icon_refurbish"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:layout_height="48dp" />
+</RelativeLayout>
