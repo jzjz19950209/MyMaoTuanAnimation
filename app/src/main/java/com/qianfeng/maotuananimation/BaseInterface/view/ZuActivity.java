@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.qianfeng.maotuananimation.BaseInterface.model.bean.ZuBean;
 import com.qianfeng.maotuananimation.BaseInterface.presenter.ZuPresenter;
+import com.qianfeng.maotuananimation.BaseInterface.view.adapter.ZuLvAdapter;
 import com.qianfeng.maotuananimation.R;
 import com.qianfeng.mylibrary.MyListView;
 import com.squareup.picasso.Picasso;

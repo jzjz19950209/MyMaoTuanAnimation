@@ -1,4 +1,4 @@
-package com.qianfeng.maotuananimation.BaseInterface.view;
+package com.qianfeng.maotuananimation.BaseInterface.view.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
