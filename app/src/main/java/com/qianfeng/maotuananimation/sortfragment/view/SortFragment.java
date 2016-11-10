@@ -14,13 +14,13 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.administrator.maotuandongman10.R;
-import com.example.administrator.maotuandongman10.detailacitivity.view.DetailsActivity;
-import com.example.administrator.maotuandongman10.sortfragment.adapter.RvAdapter;
-import com.example.administrator.maotuandongman10.sortfragment.bean.ChannelBean;
-import com.example.administrator.maotuandongman10.sortfragment.model.ICallBack;
-import com.example.administrator.maotuandongman10.sortfragment.presenter.ChannelPresenter;
-import com.example.administrator.maotuandongman10.sortfragment.util.FinalString;
+import com.qianfeng.maotuananimation.R;
+import com.qianfeng.maotuananimation.detailacitivity.view.DetailsActivity;
+import com.qianfeng.maotuananimation.sortfragment.adapter.RvAdapter;
+import com.qianfeng.maotuananimation.sortfragment.bean.ChannelBean;
+import com.qianfeng.maotuananimation.sortfragment.model.ICallBack;
+import com.qianfeng.maotuananimation.sortfragment.presenter.ChannelPresenter;
+import com.qianfeng.maotuananimation.sortfragment.util.FinalString;
 
 import java.util.ArrayList;
 import java.util.List;

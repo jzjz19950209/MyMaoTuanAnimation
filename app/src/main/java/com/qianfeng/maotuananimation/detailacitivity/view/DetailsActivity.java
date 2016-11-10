@@ -11,12 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.maotuandongman10.R;
-import com.example.administrator.maotuandongman10.detailacitivity.adapter.RvDtAdapter;
-import com.example.administrator.maotuandongman10.detailacitivity.model.ICallBackDetail;
-import com.example.administrator.maotuandongman10.detailacitivity.presenter.RvPresenter;
-import com.example.administrator.maotuandongman10.sortfragment.bean.DetailsBean;
-import com.example.administrator.maotuandongman10.sortfragment.util.FinalString;
+import com.qianfeng.maotuananimation.R;
+import com.qianfeng.maotuananimation.detailacitivity.adapter.RvDtAdapter;
+import com.qianfeng.maotuananimation.detailacitivity.model.ICallBackDetail;
+import com.qianfeng.maotuananimation.detailacitivity.presenter.RvPresenter;
+import com.qianfeng.maotuananimation.sortfragment.bean.DetailsBean;
+import com.qianfeng.maotuananimation.sortfragment.util.FinalString;
 
 import java.util.ArrayList;
 import java.util.List;

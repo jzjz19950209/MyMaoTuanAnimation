@@ -18,6 +18,7 @@
         <activity android:name=".BaseInterface.view.FaceActivity" />
         <activity android:name=".BaseInterface.view.TuiActivity" />
         <activity android:name=".BaseInterface.view.MengActivity"></activity>
+        <activity android:name=".BaseInterface.view.ZuActivity"/>
     </application>
 
 </manifest>

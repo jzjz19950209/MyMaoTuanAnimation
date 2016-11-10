@@ -1,6 +1,6 @@
 package com.qianfeng.maotuananimation.sortfragment.view;
 
-import com.example.administrator.maotuandongman10.sortfragment.bean.ChannelBean;
+import com.qianfeng.maotuananimation.sortfragment.bean.ChannelBean;
 
 import java.util.List;
 
