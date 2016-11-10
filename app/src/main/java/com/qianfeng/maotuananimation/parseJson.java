@@ -16,11 +16,11 @@ import java.util.List;
  */
 
 public class ParseJson {
-    private static List<ScollBean> scollBeanList=new ArrayList<>();
-    private static List<Rec_contentBean> rec_contentBeanList=new ArrayList<>();
+
 
     public static List<ScollBean> parseJson_scoll(String json){
         ScollBean scollBean=null;
+        List<ScollBean> scollBeanList=new ArrayList<>();
 //        DayVideoBean dayVideoBean=null;
 //        HotVideoBean hotVideoBean=null;
 //        CoserBean coserBean=null;
@@ -36,9 +36,8 @@ public class ParseJson {
                 scollBean=new ScollBean();
                 scollBean.setId(id);
                 scollBean.setPic(pic);
+                scollBeanList.add(scollBean);
             }
-            scollBeanList.add(scollBean);
-
 //            JSONArray dayVideo = jsonObject.getJSONArray("dayVideo");
 //            for (int i=0;i<dayVideo.length();i++){
 //                String id=dayVideo.getJSONObject(i).getString("id");
@@ -120,9 +119,8 @@ public class ParseJson {
                 t_bean.setId(id);
                 t_bean.setName(name);
                 t_bean.setPic(pic);
+                t_beenList.add(t_bean);
             }
-            t_beenList.add(t_bean);
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -142,8 +140,8 @@ public class ParseJson {
                 t_bean.setId(id);
                 t_bean.setName(name);
                 t_bean.setPic(pic);
+                t_beenList.add(t_bean);
             }
-            t_beenList.add(t_bean);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -164,8 +162,9 @@ public class ParseJson {
                 t_bean.setId(id);
                 t_bean.setName(name);
                 t_bean.setPic(pic);
+                t_beenList.add(t_bean);
             }
-            t_beenList.add(t_bean);
+
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -186,8 +185,9 @@ public class ParseJson {
                 t_bean.setId(id);
                 t_bean.setName(name);
                 t_bean.setPic(pic);
+                t_beenList.add(t_bean);
             }
-            t_beenList.add(t_bean);
+
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -208,8 +208,9 @@ public class ParseJson {
                 t_bean.setId(id);
                 t_bean.setName(name);
                 t_bean.setPic(pic);
+                t_beenList.add(t_bean);
             }
-            t_beenList.add(t_bean);
+
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -218,6 +219,7 @@ public class ParseJson {
     }
     public static List<Rec_contentBean> ParseJson_Rec_content(String json){
         Rec_contentBean rec_contentBean=null;
+        List<Rec_contentBean> rec_contentBeanList=new ArrayList<>();
         try {
             JSONObject jsonObject = new JSONObject(json);
             JSONArray rec_content = jsonObject.getJSONArray("rec_content");
@@ -229,8 +231,9 @@ public class ParseJson {
                 rec_contentBean.setId(id);
                 rec_contentBean.setName(name);
                 rec_contentBean.setPic(pic);
+                rec_contentBeanList.add(rec_contentBean);
             }
-            rec_contentBeanList.add(rec_contentBean);
+
 
         } catch (JSONException e) {
             e.printStackTrace();

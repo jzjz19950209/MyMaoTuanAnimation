@@ -11,38 +11,39 @@ import com.qianfeng.maotuananimation.OkHttpUtils;
  */
 
 public class IDataRecommendImpl implements IDataRecommend {
+
     @Override
     public void getScollData(OnLoadScollListener onLoadScollListener) {
-        OkHttpUtils.getScollData(onLoadScollListener);
+        OkHttpUtils.getScollData(MyDataUtils.RECOMMEND_DATA,onLoadScollListener);
     }
 
     @Override
     public void getDayVideo(OnLoad_T_Listener onLoad_t_listener) {
-        OkHttpUtils.getT_Data(MyDataUtils.DAYVIDEO,onLoad_t_listener);
+        OkHttpUtils.get_T_Data(MyDataUtils.DAYVIDEO,MyDataUtils.RECOMMEND_DATA,onLoad_t_listener);
     }
 
     @Override
     public void getHotVideo(OnLoad_T_Listener onLoad_t_listener) {
-        OkHttpUtils.getT_Data(MyDataUtils.HOTVIDEO,onLoad_t_listener);
+        OkHttpUtils.get_T_Data(MyDataUtils.HOTVIDEO,MyDataUtils.RECOMMEND_DATA,onLoad_t_listener);
     }
 
     @Override
     public void getCoser(OnLoad_T_Listener onLoad_t_listener) {
-        OkHttpUtils.getT_Data(MyDataUtils.COSER,onLoad_t_listener);
+        OkHttpUtils.get_T_Data(MyDataUtils.COSER,MyDataUtils.RECOMMEND_DATA,onLoad_t_listener);
     }
 
     @Override
     public void getGameCarousel(OnLoad_T_Listener onLoad_t_listener) {
-        OkHttpUtils.getT_Data(MyDataUtils.GAMECAROUSEL,onLoad_t_listener);
+        OkHttpUtils.get_T_Data(MyDataUtils.GAMECAROUSEL,MyDataUtils.RECOMMEND_DATA,onLoad_t_listener);
     }
 
     @Override
     public void getGameFourList(OnLoad_T_Listener onLoad_t_listener) {
-        OkHttpUtils.getT_Data(MyDataUtils.GAMEFOURLIST,onLoad_t_listener);
+        OkHttpUtils.get_T_Data(MyDataUtils.GAMEFOURLIST,MyDataUtils.RECOMMEND_DATA,onLoad_t_listener);
     }
 
     @Override
     public void getRec_content(OnLoadRec_contentListener onLoadRec_contentListener) {
-        OkHttpUtils.getRec_contentData(onLoadRec_contentListener);
+        OkHttpUtils.getRec_contentData(MyDataUtils.RECOMMEND_DATA,onLoadRec_contentListener);
     }
 }

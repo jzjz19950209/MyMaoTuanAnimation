@@ -5,13 +5,13 @@ import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.qianfeng.maotuananimation.Content.model.bean.Rec_contentBean;
 import com.qianfeng.maotuananimation.Content.model.bean.ScollBean;
@@ -36,32 +36,27 @@ public class RecommendFragment extends Fragment implements IRecommendView{
     private int prePosition=0;
     private boolean isRunning=true;
     private int viewPager_length;
+    private ImageView hotImage1,hotImage2,hotImage3,hotImage4,hotImage5,hotImage6,hotImage7,hotImage8;
+    private TextView hotText1, hotText2, hotText3, hotText4, hotText5, hotText6, hotText7, hotText8;
     private RecommendPresenter rp=new RecommendPresenter(this);
+    private MyViewPagerAdapter adapter;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view!=null){
            return view;
         }
-        rp.upDateData();
         view = inflater.inflate(R.layout.recommend_fragment,container,false);
         initView(view);
-        return view;
-    }
-
-    private void initView(final View view) {
-        head_viewPager= (ViewPager) view.findViewById(R.id.head_viewPager);
-        doLayout= (LinearLayout) view.findViewById(R.id.linearLayout);
-        linearLayout_spot= (LinearLayout) view.findViewById(R.id.linearLayout_spot);
         initData();
-        Log.d("jzjz", "initView: ");
-        head_viewPager.setAdapter(new MyViewPagerAdapter(imageViews,4));
+        adapter = new MyViewPagerAdapter(getContext(),imageViews,4);
+        head_viewPager.setAdapter(adapter);
         head_viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
             }
-
             @Override
             public void onPageSelected(int position) {
                 doLayout.getChildAt(prePosition).setEnabled(false);
@@ -74,17 +69,39 @@ public class RecommendFragment extends Fragment implements IRecommendView{
 
             }
         });
-        head_viewPager.setCurrentItem(Integer.MAX_VALUE / 2 - 3);
+        head_viewPager.setCurrentItem(Integer.MAX_VALUE / 2-3);
         autoupdateViewPager();
         drawSpot();
+        rp.upDateData();
+        return view;
+    }
 
+    private void initView(View view) {
+        head_viewPager= (ViewPager) view.findViewById(R.id.head_viewPager);
+        doLayout= (LinearLayout) view.findViewById(R.id.linearLayout);
+        linearLayout_spot= (LinearLayout) view.findViewById(R.id.linearLayout_spot);
+        hotImage1= (ImageView) view.findViewById(R.id.hot_img1);
+        hotImage2= (ImageView) view.findViewById(R.id.hot_img2);
+        hotImage3= (ImageView) view.findViewById(R.id.hot_img3);
+        hotImage5= (ImageView) view.findViewById(R.id.hot_img5);
+        hotImage6= (ImageView) view.findViewById(R.id.hot_img6);
+        hotImage7= (ImageView) view.findViewById(R.id.hot_img7);
+        hotImage8= (ImageView) view.findViewById(R.id.hot_img8);
+        hotText1= (TextView) view.findViewById(R.id.hot_text1);
+        hotText2= (TextView) view.findViewById(R.id.hot_text2);
+        hotText3= (TextView) view.findViewById(R.id.hot_text3);
+        hotText4= (TextView) view.findViewById(R.id.hot_text4);
+        hotText5= (TextView) view.findViewById(R.id.hot_text5);
+        hotText6= (TextView) view.findViewById(R.id.hot_text6);
+        hotText7= (TextView) view.findViewById(R.id.hot_text7);
+        hotText8= (TextView) view.findViewById(R.id.hot_text8);
     }
     private void initData(){
         for (int i=0;i<4;i++) {
-//            ImageView imageView=new ImageView(getContext());
-//            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//            imageView.setImageResource(R.drawable.item_default);
-//            imageViews.add(imageView);
+            ImageView imageView=new ImageView(getContext());
+            imageView.setScaleType(ImageView.ScaleType.CENTER);
+            imageView.setImageResource(R.drawable.item_default);
+            imageViews.add(imageView);
             View view=new View(getContext());
             LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics())),
                     (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
@@ -133,13 +150,14 @@ public class RecommendFragment extends Fragment implements IRecommendView{
     @Override
     public void initScoll(List<ScollBean> list) {
         viewPager_length=list.size();
-        for (int i = 0; i < viewPager_length; i++) {
+        imageViews.clear();
+        for (int i = 0; i < 4; i++) {
             ImageView imageView=new ImageView(getContext());
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             Picasso.with(getContext()).load(list.get(i).getPic()).into(imageView);
             imageViews.add(imageView);
         }
-
+        adapter.notifyDataSetChanged();
     }
 
     @Override
@@ -149,7 +167,26 @@ public class RecommendFragment extends Fragment implements IRecommendView{
 
     @Override
     public void initHotVideo(List<T_Bean> list) {
-
+//        Context context=getContext();
+//        for (int i = 0; i < list.size(); i++) {
+//            Log.d("jzjz", "initHotVideo: ");
+//        }
+//        Picasso.with(context).load(list.get(0).getPic()).into(hotImage1);
+//        hotText1.setText(list.get(0).getName());
+//        Picasso.with(context).load(list.get(1).getPic()).into(hotImage2);
+//        hotText2.setText(list.get(1).getName());
+//        Picasso.with(context).load(list.get(2).getPic()).into(hotImage3);
+//        hotText3.setText(list.get(2).getName());
+//        Picasso.with(context).load(list.get(3).getPic()).into(hotImage4);
+//        hotText4.setText(list.get(3).getName());
+//        Picasso.with(context).load(list.get(4).getPic()).into(hotImage5);
+//        hotText5.setText(list.get(4).getName());
+//        Picasso.with(context).load(list.get(5).getPic()).into(hotImage6);
+//        hotText6.setText(list.get(5).getName());
+//        Picasso.with(context).load(list.get(6).getPic()).into(hotImage7);
+//        hotText7.setText(list.get(6).getName());
+//        Picasso.with(context).load(list.get(7).getPic()).into(hotImage8);
+//        hotText8.setText(list.get(7).getName());
     }
 
     @Override

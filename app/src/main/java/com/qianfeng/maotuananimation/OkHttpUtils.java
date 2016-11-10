@@ -2,6 +2,7 @@ package com.qianfeng.maotuananimation;
 
 import android.os.Handler;
 
+import com.qianfeng.maotuananimation.Content.model.listener.OnLoadRec_contentListener;
 import com.qianfeng.maotuananimation.Content.model.listener.OnLoadScollListener;
 import com.qianfeng.maotuananimation.Content.model.listener.OnLoad_T_Listener;
 
@@ -96,7 +97,8 @@ public class OkHttpUtils {
                mHandler.post(new Runnable() {
                    @Override
                    public void run() {
-                       onLoadScollListener.onRespond();
+                       onLoadScollListener.onRespond(ParseJson.parseJson_scoll(result));
+
                    }
                });
 
@@ -104,4 +106,19 @@ public class OkHttpUtils {
        });
    }
 
+   public static void getRec_contentData(String httpurl, final OnLoadRec_contentListener onLoadRec_contentListener){
+       Request request=new Request.Builder().url(httpurl).build();
+       client.newCall(request).enqueue(new Callback() {
+           @Override
+           public void onFailure(Call call, IOException e) {
+               onLoadRec_contentListener.onFailure(e.getMessage());
+           }
+
+           @Override
+           public void onResponse(Call call, Response response) throws IOException {
+               String result=response.body().string();
+                onLoadRec_contentListener.onRespond(ParseJson.ParseJson_Rec_content(result));
+           }
+       });
+   }
 }
