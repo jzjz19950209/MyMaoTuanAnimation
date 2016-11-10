@@ -12,6 +12,15 @@ public class T_Bean {
     public T_Bean() {
     }
 
+    @Override
+    public String toString() {
+        return "T_Bean{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", pic='" + pic + '\'' +
+                '}';
+    }
+
     public T_Bean(String id, String name, String pic) {
         this.id = id;
         this.name = name;

@@ -3,8 +3,8 @@ package com.qianfeng.maotuananimation.Content.model;
 import com.qianfeng.maotuananimation.Content.model.listener.OnLoadRec_contentListener;
 import com.qianfeng.maotuananimation.Content.model.listener.OnLoadScollListener;
 import com.qianfeng.maotuananimation.Content.model.listener.OnLoad_T_Listener;
-import com.qianfeng.maotuananimation.MyDataUtils;
-import com.qianfeng.maotuananimation.OkHttpUtils;
+import com.qianfeng.maotuananimation.Content.util.MyDataUtils;
+import com.qianfeng.maotuananimation.Content.util.OkHttpUtils;
 
 /**
  * Created by qf on 2016/11/9.

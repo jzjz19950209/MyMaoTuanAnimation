@@ -12,6 +12,7 @@ import android.widget.RadioGroup;
 
 import com.qianfeng.maotuananimation.R;
 import com.qianfeng.maotuananimation.Content.view.Adapter.MyFragmentPagerAdapter;
+import com.qianfeng.maotuananimation.sortfragment.util.GetSortFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +75,7 @@ public class ContentFragment extends Fragment {
             }
         });
         fragments.add(new RecommendFragment());
-        fragments.add(new Fragment());
+        fragments.add(GetSortFragment.getSortFragment());
         viewPager.setAdapter(new MyFragmentPagerAdapter(getChildFragmentManager(),fragments));
     }
 }

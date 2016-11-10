@@ -1,4 +1,4 @@
-package com.qianfeng.maotuananimation;
+package com.qianfeng.maotuananimation.Content.util;
 
 /**
  * Created by qf on 2016/11/9.

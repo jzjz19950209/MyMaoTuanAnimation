@@ -1,4 +1,4 @@
-package com.qianfeng.maotuananimation;
+package com.qianfeng.maotuananimation.Content.util;
 
 import android.os.Handler;
 
@@ -116,9 +116,15 @@ public class OkHttpUtils {
 
            @Override
            public void onResponse(Call call, Response response) throws IOException {
-               String result=response.body().string();
-                onLoadRec_contentListener.onRespond(ParseJson.ParseJson_Rec_content(result));
+               final String result=response.body().string();
+               mHandler.post(new Runnable() {
+                   @Override
+                   public void run() {
+                       onLoadRec_contentListener.onRespond(ParseJson.ParseJson_Rec_content(result));
+                   }
+               });
            }
        });
    }
+
 }

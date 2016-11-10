@@ -112,9 +112,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
                 <ImageView
                     android:id="@+id/hot_img1"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -138,6 +138,7 @@
 
                 <ImageView
                     android:id="@+id/hot_img2"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -160,6 +161,7 @@
 
                 <ImageView
                     android:id="@+id/hot_img3"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -182,6 +184,7 @@
 
                 <ImageView
                     android:id="@+id/hot_img4"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -210,6 +213,7 @@
 
                 <ImageView
                     android:id="@+id/hot_img5"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -233,6 +237,7 @@
 
                 <ImageView
                     android:id="@+id/hot_img6"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -255,6 +260,7 @@
 
                 <ImageView
                     android:id="@+id/hot_img7"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -277,6 +283,7 @@
 
                 <ImageView
                     android:id="@+id/hot_img8"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -324,6 +331,7 @@
 
                 <ImageView
                     android:id="@+id/recommend_img1"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -347,6 +355,7 @@
 
                 <ImageView
                     android:id="@+id/recommend_img2"
+                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:src="@drawable/item_default"
                     android:layout_height="100dp" />
@@ -369,6 +378,7 @@
 
                 <ImageView
                     android:id="@+id/recommend_img3"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -395,7 +405,32 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/recommend_img4"
+                    android:src="@drawable/item_default"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/recommend_tv4"
+                    android:text="猫团动漫"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
                     android:id="@+id/recommend_img5"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -407,7 +442,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="2" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -419,34 +453,13 @@
 
                 <ImageView
                     android:id="@+id/recommend_img6"
-                    android:src="@drawable/item_default"
+                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
+                    android:src="@drawable/item_default"
                     android:layout_height="100dp" />
 
                 <TextView
                     android:id="@+id/recommend_tv6"
-                    android:text="猫团动漫"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/recommend_img7"
-                    android:layout_width="match_parent"
-                    android:src="@drawable/item_default"
-                    android:layout_height="100dp" />
-
-                <TextView
-                    android:id="@+id/recommend_tv7"
                     android:text="猫团动漫"
                     android:gravity="center"
                     android:layout_width="match_parent"
@@ -488,6 +501,7 @@
 
                 <ImageView
                     android:id="@+id/dayRafresh_img1"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -511,6 +525,7 @@
 
                 <ImageView
                     android:id="@+id/dayRafresh_img2"
+                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:src="@drawable/item_default"
                     android:layout_height="100dp" />
@@ -533,6 +548,7 @@
 
                 <ImageView
                     android:id="@+id/dayRafresh_img3"
+                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:src="@drawable/item_default"
                     android:layout_height="100dp" />
@@ -555,6 +571,7 @@
 
                 <ImageView
                     android:id="@+id/dayRafresh_img4"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -602,10 +619,18 @@
                 android:textColor="@color/colorSortBtn"
                 android:layout_height="match_parent" />
         </LinearLayout>
-
+        <!--<HorizontalScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp">-->
+            <!--<ListView-->
+                <!--android:layout_width="200dp"-->
+                <!--android:id="@+id/lv"-->
+                <!--android:layout_height="150dp"></ListView>-->
+        <!--</HorizontalScrollView>-->
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:scrollbars="none"
+            android:id="@+id/recyclerview_horizontal"
             android:layout_height="150dp">
         </android.support.v7.widget.RecyclerView>
         <LinearLayout
@@ -622,6 +647,7 @@
 
             <ImageView
                 android:id="@+id/game_img1"
+                android:scaleType="centerCrop"
                 android:layout_width="match_parent"
                 android:src="@drawable/item_default"
                 android:layout_height="100dp" />
@@ -645,6 +671,7 @@
 
             <ImageView
                 android:id="@+id/game_img2"
+                android:scaleType="centerCrop"
                 android:src="@drawable/item_default"
                 android:layout_width="match_parent"
                 android:layout_height="100dp" />
@@ -672,6 +699,7 @@
 
                 <ImageView
                     android:id="@+id/game_img3"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -695,6 +723,7 @@
 
                 <ImageView
                     android:id="@+id/game_img4"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -715,6 +744,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="4"
                 android:textSize="18dp"
+                android:scaleType="centerCrop"
                 android:gravity="center_vertical"
                 android:layout_marginLeft="10dp"
                 android:text="COSER"
@@ -742,6 +772,7 @@
 
                 <ImageView
                     android:id="@+id/coser_img1"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -765,6 +796,7 @@
 
                 <ImageView
                     android:id="@+id/coser_img2"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -787,6 +819,7 @@
 
                 <ImageView
                     android:id="@+id/coser_img3"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
@@ -809,6 +842,7 @@
 
                 <ImageView
                     android:id="@+id/coser_img4"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/item_default"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
