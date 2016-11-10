@@ -38,6 +38,7 @@
         <RadioGroup
             android:layout_width="220dp"
             android:layout_height="36dp"
+            android:id="@+id/meng_rgg"
             android:orientation="horizontal"
             android:layout_centerInParent="true">
             <RadioButton
@@ -45,6 +46,7 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:text="最新"
+                android:id="@+id/meng_rb1"
                 android:textSize="16sp"
                 android:gravity="center"
                 android:checked="true"
@@ -56,6 +58,7 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:text="最热"
+                android:id="@+id/meng_rb2"
                 android:background="@drawable/btnbg"
                 android:gravity="center"
                 android:textSize="16sp"

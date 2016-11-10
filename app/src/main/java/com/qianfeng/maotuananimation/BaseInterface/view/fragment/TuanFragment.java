@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -18,7 +19,9 @@ import android.widget.TextView;
 import com.qianfeng.maotuananimation.BaseInterface.model.bean.TuanBean;
 import com.qianfeng.maotuananimation.BaseInterface.presenter.TuanPresenter;
 import com.qianfeng.maotuananimation.BaseInterface.view.FaceActivity;
+import com.qianfeng.maotuananimation.BaseInterface.view.MengActivity;
 import com.qianfeng.maotuananimation.BaseInterface.view.TuiActivity;
+import com.qianfeng.maotuananimation.BaseInterface.view.ZuActivity;
 import com.qianfeng.maotuananimation.BaseInterface.view.adapter.TuanLvAdapter;
 import com.qianfeng.maotuananimation.BaseInterface.view.adapter.TuanReAdapter;
 import com.qianfeng.maotuananimation.R;
@@ -88,6 +91,7 @@ public class TuanFragment extends Fragment implements ITuanView{
                 return true;
             }
         });
+
     }
 
     @Override
@@ -113,10 +117,29 @@ public class TuanFragment extends Fragment implements ITuanView{
             }
         });
         TuanLvAdapter lvAdapter=new TuanLvAdapter(bean.getNearby(),getActivity());
+        lv.setFocusable(false);
         lv.setAdapter(lvAdapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent=new Intent(getActivity(), ZuActivity.class);
+                intent.putExtra("id",bean.getNearby().get(i).getId());
+                startActivity(intent);
+            }
+        });
         for (int i = 0; i < line.getChildCount(); i++) {
             TextView textView = (TextView) line.getChildAt(i);
             textView.setText(bean.getTips().get(i));
+            final int finalI = i;
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(getActivity(), MengActivity.class);
+                    intent.putExtra("word",bean.getTips().get(finalI));
+                    intent.putExtra("order","new");
+                    startActivity(intent);
+                }
+            });
         }
     }
 }

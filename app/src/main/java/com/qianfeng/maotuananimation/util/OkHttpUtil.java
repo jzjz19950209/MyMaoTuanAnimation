@@ -13,7 +13,8 @@ public class OkHttpUtil {
     public final static String TUANURL="http://manhua.haomee.cn/?&pf=1&android_version=19&app_version=5717&app_channel=91%E5%B8%82%E5%9C%BA&m=New&a=groupHomePage&location_y=113.340762&location_x=23.176336&Luid=";
     public final static String FACEURL="http://manhua.haomee.cn/?&pf=1&android_version=19&app_version=5717&app_channel=91%E5%B8%82%E5%9C%BA&m=Group&a=newGroupList&last_id=0&location_x=23.176336&location_y=113.340762";
     public final static String TUIURL="http://manhua.haomee.cn/?&pf=1&android_version=19&app_version=5717&app_channel=91%E5%B8%82%E5%9C%BA&m=New&a=recGroupTypeClick&location_y=113.340762&id=146&location_x=23.176336&Luid=&last_id=0&limit=10";
-    public final static String MENGURL="http://manhua.haomee.cn/?&pf=1&android_version=19&app_version=5717&app_channel=91%E5%B8%82%E5%9C%BA&m=Group&a=search&needPage=1&order=new&word=%E4%BE%A6%E6%8E%A2&location_y=113.340762&location_x=23.176336&Luid=&last_id=0&limit=10&type=1";
+    public final static String MENGURL="http://manhua.haomee.cn/?&pf=1&android_version=19&app_version=5717&app_channel=91%E5%B8%82%E5%9C%BA&m=Group&a=search&needPage=1&order=new&word=%E4%BE%A6%E6%8E%A2&location_y=113.340762&location_x=23.176336&Luid=&last_id=0&type=1";
+    public final static String ZUURL="http://manhua.haomee.cn/?&pf=1&android_version=19&app_version=5717&app_channel=91%E5%B8%82%E5%9C%BA&m=Group&a=groupInfo&id=88048&uid=&need_page=1&last_id=&location_x=39.906907&location_y=116.39725&";
 
 
     public static OkHttpClient getClient() {

@@ -2,6 +2,7 @@ package com.qianfeng.maotuananimation.util;
 
 import com.qianfeng.maotuananimation.BaseInterface.model.bean.FaceBean;
 import com.qianfeng.maotuananimation.BaseInterface.model.bean.TuanBean;
+import com.qianfeng.maotuananimation.BaseInterface.model.bean.ZuBean;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -152,5 +153,114 @@ public class JsonParseUtil {
             e.printStackTrace();
         }
         return faceBean;
+    }
+
+    public static ZuBean parseZu(String json)
+    {
+        ZuBean zuBean=new ZuBean();
+        try {
+            JSONObject jsonObject=new JSONObject(json);
+            zuBean.setId(jsonObject.getString("id"));
+            zuBean.setName(jsonObject.getString("name"));
+            zuBean.setDesc(jsonObject.getString("desc"));
+            List<String> t=new ArrayList<>();
+            JSONArray tips = jsonObject.getJSONArray("tips");
+            for (int i = 0; i < tips.length(); i++) {
+                t.add(tips.getString(i));
+            }
+            zuBean.setTips(t);
+            zuBean.setCreate_time(jsonObject.getString("create_time"));
+            zuBean.setSuccess_time(jsonObject.getString("success_time"));
+            zuBean.setTotal(jsonObject.getString("total"));
+            zuBean.setCur_num(jsonObject.getString("cur_num"));
+            zuBean.setIcon(jsonObject.getString("icon"));
+            zuBean.setLevel(jsonObject.getString("level"));
+            ZuBean.OwnerBean owner=new ZuBean.OwnerBean();
+            owner.setId(jsonObject.getJSONObject("owner").getString("id"));
+            owner.setUsername(jsonObject.getJSONObject("owner").getString("username"));
+            owner.setNickname(jsonObject.getJSONObject("owner").getString("nickname"));
+            owner.setMobile(jsonObject.getJSONObject("owner").getString("mobile"));
+            owner.setHead_pic(jsonObject.getJSONObject("owner").getString("head_pic"));
+            owner.setSex(jsonObject.getJSONObject("owner").getString("sex"));
+            owner.setSign(jsonObject.getJSONObject("owner").getString("sign"));
+            owner.setBirthday(jsonObject.getJSONObject("owner").getString("birthday"));
+            owner.setHx_username(jsonObject.getJSONObject("owner").getString("hx_username"));
+            owner.setHx_password(jsonObject.getJSONObject("owner").getString("hx_password"));
+            owner.setSuperscript(jsonObject.getJSONObject("owner").getString("superscript"));
+            owner.setUser_level_group(jsonObject.getJSONObject("owner").getString("user_level_group"));
+            owner.setUser_level_group_tip(jsonObject.getJSONObject("owner").getString("user_level_group_tip"));
+            zuBean.setOwner(owner);
+            List<ZuBean.MemberBean> mList=new ArrayList<>();
+            for (int i = 0; i < jsonObject.getJSONArray("member").length(); i++) {
+                ZuBean.MemberBean m=new ZuBean.MemberBean();
+                JSONObject member = jsonObject.getJSONArray("member").getJSONObject(i);
+                m.setId(member.getString("id"));
+                m.setUsername(member.getString("username"));
+                m.setNickname(member.getString("nickname"));
+                m.setMobile(member.getString("mobile"));
+                m.setHead_pic(member.getString("head_pic"));
+                m.setSex(member.getString("sex"));
+                m.setSign(member.getString("sign"));
+                m.setBirthday(member.getString("birthday"));
+                m.setHx_username(member.getString("hx_username"));
+                m.setHx_password(member.getString("hx_password"));
+                m.setSuperscript(member.getString("superscript"));
+                m.setUser_level_group(member.getString("user_level_group"));
+                m.setUser_level_group_tip(member.getString("user_level_group_tip"));
+                mList.add(m);
+            }
+            zuBean.setMember(mList);
+            zuBean.setHx_id(jsonObject.getString("hx_id"));
+            zuBean.setLast_day(jsonObject.getString("last_day"));
+            zuBean.setActive_day(jsonObject.getString("active_day"));
+            zuBean.setRec_list(jsonObject.getString("rec_list"));
+            zuBean.setAll_active_date(jsonObject.getString("all_active_date"));
+            zuBean.setIs_rec(jsonObject.getString("is_rec"));
+            zuBean.setIs_black(jsonObject.getString("is_black"));
+            zuBean.setPic(jsonObject.getString("pic"));
+            zuBean.setSuperscript(jsonObject.getString("superscript"));
+            zuBean.setIs_deal(jsonObject.getString("is_deal"));
+            JSONArray level_tips = jsonObject.getJSONArray("level_tips");
+            List<String> le=new ArrayList<>();
+            for (int i = 0; i < level_tips.length(); i++) {
+                le.add(level_tips.getString(i));
+            }
+            zuBean.setLevel_tips(le);
+            zuBean.setIs_cartoon(jsonObject.getString("is_cartoon"));
+            zuBean.setIs_video(jsonObject.getString("is_video"));
+            zuBean.setNuantuan_number(jsonObject.getString("nuantuan_number"));
+            zuBean.setLocation_x(jsonObject.getString("location_x"));
+            zuBean.setLocation_y(jsonObject.getString("location_y"));
+            zuBean.setCity(jsonObject.getString("city"));
+            zuBean.setAdd_need_check(jsonObject.getBoolean("add_need_check"));
+            zuBean.setHot_value(jsonObject.getString("hot_value"));
+            zuBean.setIs_white(jsonObject.getString("is_white"));
+            zuBean.setUpdate_time(jsonObject.getString("update_tiem"));
+            zuBean.setDistance(jsonObject.getString("distance"));
+            zuBean.setIs_member(jsonObject.getBoolean("is_member"));
+            zuBean.setBirthday(jsonObject.getString("birthday"));
+            zuBean.setUser_level_group(jsonObject.getString("user_level_group"));
+            zuBean.setUser_level_group_tip(jsonObject.getString("user_level_group_tip"));
+            zuBean.setIs_deputy(jsonObject.getBoolean("is_deputy"));
+            zuBean.setHave_next(jsonObject.getBoolean("have_next"));
+            zuBean.setLast_id(jsonObject.getString("last_id"));
+            zuBean.setIs_owner(jsonObject.getBoolean("is_owner"));
+            zuBean.setUser_score(jsonObject.getString("user_score"));
+            zuBean.setLevel_day(jsonObject.getString("level_day"));
+            zuBean.setLevel_percent(jsonObject.getString("level_percent"));
+            zuBean.setError(jsonObject.getInt("error"));
+            List<String> tanmu=new ArrayList<>();
+            JSONArray danmu = jsonObject.getJSONArray("danmu");
+            for (int i = 0; i < danmu.length(); i++) {
+                tanmu.add(danmu.getString(i));
+            }
+            zuBean.setDanmu(tanmu);
+            zuBean.setHave_new_pic(jsonObject.getBoolean("have_new_pic"));
+            zuBean.setIsBan(jsonObject.getBoolean("isBan"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return zuBean;
     }
 }
