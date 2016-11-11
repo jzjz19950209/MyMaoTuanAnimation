@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/item_layout"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
+        android:text="2015-04-21"
+        android:textSize="10sp" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_time"
+        android:layout_marginTop="-16dp"
+        android:layout_toRightOf="@id/tv_time"
+        android:layout_alignBottom="@+id/user_item"
+        android:layout_marginBottom="-32dp"
+        android:background="@color/colorOr" />
+
+    <View
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignLeft="@id/view_line"
+        android:layout_alignTop="@id/tv_time"
+        android:layout_marginLeft="-5dp"
+        android:background="@drawable/view_item"
+        android:id="@+id/view" />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_marginLeft="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="家兔团聊"
+        android:textColor="#d3000000"
+        android:textSize="16sp"
+        android:layout_alignTop="@id/view"
+        android:layout_toRightOf="@id/view"
+        />
+
+    <RelativeLayout
+        android:id="@+id/user_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_title"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/user_item">
+
+        <com.qianfeng.maotuananimation.useractivity.util.CyclemageView
+            android:id="@+id/user_item_head"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_time_icon_fan" />
+
+        <TextView
+            android:id="@+id/user_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_toRightOf="@id/user_item_head"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="name"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/user_item_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_item_name"
+            android:layout_alignLeft="@+id/user_item_name"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="144/2133"
+            android:textColor="#44000000"
+            android:textSize="12sp" />
+
+
+
+        <TextView
+            android:id="@+id/user_item_groupdesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/user_item_adress"
+            android:layout_alignLeft="@+id/user_item_name"
+            android:ellipsize="end"
+            android:text="金佛爱上发送点击佛山的飞机哦司法鉴定撒粉丝哦啊发动机松岛枫"
+            android:textColor="#44000000"
+            android:maxLines="3"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_video_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.qianfeng.maotuananimation.VideoDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#DDDDDD"
+            android:layout_height="420dp"/>
+        <RelativeLayout
+            android:id="@+id/bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#FF9700">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:onClick="back_btn1"
+                android:src="@drawable/play_bt_back" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:onClick="share_btn"
+                android:src="@drawable/list_bt_share" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/animation_introduce_layout"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_below="@id/bar_layout"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/animation_face"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/no_content" />
+
+            <TextView
+                android:id="@+id/animation_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/animation_face"
+                android:text="小桃小栗LoveLove物语"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/animation_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/animation_name"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:text="9.8分"
+                android:textColor="#FF9700" />
+
+            <LinearLayout
+                android:id="@+id/animation_ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/animation_name"
+                android:layout_below="@id/animation_name"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/animation_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地区：日韩" />
+
+                <TextView
+                    android:id="@+id/animation_daoyan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="导演：暂无" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/animation_character"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/animation_name"
+                android:layout_below="@id/animation_ll1"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="主演：冈本信彦,加隈亚衣,大空直美,前田玲奈,仲谷明香" />
+
+            <TextView
+                android:id="@+id/animation_update_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/animation_name"
+                android:layout_below="@id/animation_character"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="更新时间：每周五更新（更新至13集）" />
+
+            <TextView
+                android:id="@+id/animation_publish_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/animation_name"
+                android:layout_below="@id/animation_update_string"
+                android:layout_marginTop="2dp"
+                android:text="上映时间：2016" />
+
+            <Button
+                android:id="@+id/play_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@id/animation_name"
+                android:layout_below="@id/animation_publish_time"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_bg"
+                android:text="立即播放"
+                android:onClick="playNow_btn"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/download_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/animation_publish_time"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/play_btn"
+                android:background="@drawable/btn_bg"
+                android:text="离线下载"
+                android:onClick="download_btn"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/animation_ll2"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_below="@id/animation_introduce_layout"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="collect_btn"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/animation_btn_collect"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="5dp"
+                    android:src="@drawable/home_icon_collect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收藏" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="5dp"
+                    android:src="@drawable/image_time_icon_chat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="团聊" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="comment_btn"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="5dp"
+                    android:src="@drawable/home_icon_comment" />
+
+                <TextView
+                    android:id="@+id/animation_comment_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评论（28）" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/animation_whoarewatching"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/animation_ll2"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/white">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/animation_ll2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:text="谁在看：" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/animation_whoarewatching_userface"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/animation_ll2"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@id/animation_whoarewatching"
+                android:background="@android:color/white"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/animation_from_site"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/animation_whoarewatching"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/animation_ll2"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:text="播放源：" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/animation_from_site_icon"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/animation_ll2"
+                android:layout_toRightOf="@id/animation_whoarewatching_userface"
+                android:background="@android:color/white"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/animation_btn_ll"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_below="@id/animation_from_site"
+            android:layout_marginTop="1dp"
+            android:background="#efefef"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/jianjie_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#efefef"
+                android:onClick="jianjie"
+                android:text="简介"
+                android:textColor="#757575" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#d9d4d4" />
+
+            <Button
+                android:id="@+id/juji_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#efefef"
+                android:onClick="juji"
+                android:text="剧集"
+                android:textColor="#FF9700" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/animation_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/animation_btn_ll"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:visibility="invisible" />
+
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/action_flexbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/animation_btn_ll"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/white"
+            app:flexWrap="wrap"></com.google.android.flexbox.FlexboxLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

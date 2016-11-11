@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <com.qianfeng.maotuananimation.useractivity.util.CyclemageView
+            android:id="@+id/iv_head"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_margin="8dp" />
+
+        <ImageView
+            android:id="@+id/iv_super"
+            android:layout_width="24dp"
+            android:layout_height="18dp"
+            android:layout_alignBottom="@id/iv_head"
+            android:layout_alignRight="@id/iv_head" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_alignTop="@id/iv_head"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_head"
+            android:text="username"
+            android:textColor="#d1000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignLeft="@id/tv_name"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/age_item"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="16"
+            android:textColor="@color/colorwhite" />
+
+        <ImageView
+            android:id="@+id/iv_adress"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignBottom="@+id/tv_age"
+            android:layout_toEndOf="@+id/tv_age"
+            android:layout_toRightOf="@+id/tv_age"
+            android:padding="2dp"
+            android:src="@drawable/image_icon_location" />
+
+        <TextView
+            android:id="@+id/tv_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignBottom="@+id/tv_age"
+            android:layout_toRightOf="@+id/iv_adress"
+            android:padding="2dp"
+            android:text="广东省"
+            android:textColor="#c2000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/iv_head"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="中国动产当，去你妈的"
+            android:textColor="#c2000000"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/fblayout"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl"
+        android:layout_centerHorizontal="true"
+        app:flexWrap="wrap"
+        app:justifyContent="center">
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/fblayout"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_groupchat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:padding="4dp"
+                android:src="@drawable/image_time_icon_chat" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="团聊" />
+
+            <TextView
+                android:id="@+id/tv_groupchatcount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_care"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:padding="4dp"
+                android:src="@drawable/image_time_icon_chat" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="关注" />
+
+            <TextView
+                android:id="@+id/tv_carecount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fans"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:padding="4dp"
+                android:src="@drawable/image_time_icon_chat" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="粉丝" />
+
+            <TextView
+                android:id="@+id/tv_fanscount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="9" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#aeacac" />
+
+
+</RelativeLayout>

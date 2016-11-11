@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_web_video_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qianfeng.maotuananimation.BaseInterface.view.WebVideoPlayActivity">
+
+    <RelativeLayout
+        android:id="@+id/webview_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FF9700">
+
+        <ImageView
+            android:id="@+id/webview_back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:onClick="back_btn3"
+            android:padding="10dp"
+            android:src="@drawable/play_bt_back" />
+
+        <TextView
+            android:id="@+id/webview_title"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/webview_back_btn"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/play_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/webview_bar"></WebView>
+</RelativeLayout>
