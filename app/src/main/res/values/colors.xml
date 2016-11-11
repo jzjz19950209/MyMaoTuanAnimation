@@ -11,4 +11,10 @@
     <color name="orange">#fda92c</color>
     <color name="white">#ffffff</color>
     <color name="or">#44fa7d17</color>
+    <color name="colorUseMore">#FF9700</color>
+    <color name="textColor">#757575</color>
+    <color name="colorage">#9979afd1</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="colorOr">#ff8800</color>
+    <color name="colorOrr">#fefadd93</color>
 </resources>
