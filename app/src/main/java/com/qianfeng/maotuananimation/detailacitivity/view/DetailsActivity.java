@@ -31,7 +31,8 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView tv;
     private ImageButton ib;
     private ImageView iv;
-
+    private ImageView details_back;
+    private TextView details_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +40,21 @@ public class DetailsActivity extends AppCompatActivity {
         getIntents();
         initViews();
         initPresent(id);
+        details_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+        details_text.setText(getIntent().getStringExtra("title"));
     }
 
     private void initViews() {
         list = new ArrayList<>();
         rvDtAdapter = new RvDtAdapter(this, list);
         recyclerview = ((RecyclerView) findViewById(R.id.rv));
+        details_back= (ImageView) findViewById(R.id.details_back);
+        details_text= (TextView) findViewById(R.id.details_text);
         recyclerview.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         recyclerview.setAdapter(rvDtAdapter);
 

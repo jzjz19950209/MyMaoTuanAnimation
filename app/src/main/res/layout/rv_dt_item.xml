@@ -6,7 +6,7 @@
     android:layout_marginRight="10dp"
     android:background="@drawable/rv_dt_bg"
     android:layout_height="wrap_content">
-    <com.example.administrator.maotuandongman10.sortfragment.util.RectangleImageView
+    <com.qianfeng.maotuananimation.sortfragment.util.RectangleImageView
         android:scaleType="centerCrop"
         android:layout_width="88dp"
         android:layout_margin="6dp"

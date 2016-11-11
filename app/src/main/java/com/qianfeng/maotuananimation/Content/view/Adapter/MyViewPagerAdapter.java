@@ -1,5 +1,6 @@
-package com.qianfeng.maotuananimation.view.Adapter;
+package com.qianfeng.maotuananimation.Content.view.Adapter;
 
+import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +15,12 @@ import java.util.List;
 public class MyViewPagerAdapter extends PagerAdapter {
     private List<ImageView> list;
     private int imgNum;
+    private Context context;
 
-    public MyViewPagerAdapter(List<ImageView> list, int imgNum) {
+    public MyViewPagerAdapter(Context context,List<ImageView> list, int imgNum) {
         this.list = list;
         this.imgNum = imgNum;
+        this.context=context;
     }
 
     @Override
@@ -32,7 +35,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        ImageView imageView=list.get(position%imgNum);
+        ImageView imageView= list.get(position%imgNum);
         container.addView(imageView);
         return imageView;
     }
