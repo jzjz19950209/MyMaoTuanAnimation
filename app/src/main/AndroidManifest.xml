@@ -23,6 +23,12 @@
         <activity android:name=".BaseInterface.view.ZuActivity" />
         <activity android:name=".detailacitivity.view.DetailsActivity" />
         <activity android:name=".Content.view.Rec_connentActivity"></activity>
+        <activity android:name=".VideoDetails.modle.view.CommentActivity" />
+        <activity android:name=".VideoDetails.modle.view.WebVideoPlayActivity" />
+        <activity android:name=".VideoDetails.modle.view.DownloadActivity"></activity>
+        <activity android:name=".view.GroupChatActivity"/>
+        <activity android:name=".VideoDetails.modle.VideoDetailsActivity"/>
+        <activity android:name=".useractivity.view.UserActivity"/>
     </application>
 
 </manifest>
