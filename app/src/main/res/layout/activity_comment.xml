@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_comment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qianfeng.maotuananimation.BaseInterface.view.CommentActivity">
+
+    <RelativeLayout
+        android:id="@+id/commentbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FF9700">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:onClick="back_btn2"
+            android:padding="10dp"
+            android:src="@drawable/play_bt_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="吐槽"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/comment_lv"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/commentbar"></ListView>
+</RelativeLayout>

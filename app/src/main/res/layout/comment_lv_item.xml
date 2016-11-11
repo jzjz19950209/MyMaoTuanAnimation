@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/comment_item_userface"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/comment_item_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/comment_item_userface"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/comment_item_userface"
+        android:text="用户名"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/comment_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_item_username"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_toRightOf="@id/comment_item_userface"
+        android:text="测试文本测试文本测试文本测试文本测试文本" />
+
+    <TextView
+        android:id="@+id/comment_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/comment_item_userface"
+        android:layout_marginRight="15dp"
+        android:text="11-9" />
+
+    <TextView
+        android:id="@+id/comment_item_comment_num"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:text="4" />
+
+    <ImageView
+        android:id="@+id/comment_item_reply"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/comment_item_comment_num"
+        android:src="@drawable/content_reply_default" />
+
+    <TextView
+        android:id="@+id/comment_item_pro_num"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/comment_item_reply"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="0" />
+
+    <ImageView
+        android:id="@+id/comment_item_pro"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/comment_item_pro_num"
+        android:src="@drawable/content_pro_default" />
+
+</RelativeLayout>
