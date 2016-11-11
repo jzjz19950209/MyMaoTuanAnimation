@@ -20,6 +20,7 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.qianfeng.maotuananimation.Content.model.bean.Rec_contentBean;
 import com.qianfeng.maotuananimation.Content.model.bean.ScollBean;
@@ -72,7 +73,7 @@ public class RecommendFragment extends Fragment implements IRecommendView,View.O
         initView(view);
         initData();
         adapter = new MyViewPagerAdapter(getContext(),imageViews,4);
-        head_viewPager.setAdapter(adapter);
+
         head_viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -104,8 +105,8 @@ public class RecommendFragment extends Fragment implements IRecommendView,View.O
                 }
             }
         });
-        head_viewPager.setCurrentItem(Integer.MAX_VALUE / 2-4);
-        autoupdateViewPager();
+        head_viewPager.setCurrentItem(Integer.MAX_VALUE / 2-5);
+        //autoupdateViewPager();
         drawSpot();
         rp.upDateData();
         setRecyclerView();
@@ -192,10 +193,10 @@ public class RecommendFragment extends Fragment implements IRecommendView,View.O
     }
     private void initData(){
         for (int i=0;i<4;i++) {
-            ImageView imageView=new ImageView(getContext());
-            imageView.setScaleType(ImageView.ScaleType.CENTER);
-            imageView.setImageResource(R.drawable.item_default);
-            imageViews.add(imageView);
+//            ImageView imageView=new ImageView(getContext());
+//            imageView.setScaleType(ImageView.ScaleType.CENTER);
+//            imageView.setImageResource(R.drawable.item_default);
+//            imageViews.add(imageView);
             View view=new View(getContext());
             LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics())),
                     (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
@@ -213,13 +214,16 @@ public class RecommendFragment extends Fragment implements IRecommendView,View.O
             @Override
             public void run() {
                 while (isRunning){
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            head_viewPager.setCurrentItem(head_viewPager.getCurrentItem()+1);
-                        }
-                    });
                     SystemClock.sleep(3000);
+                    if (getActivity()!=null) {
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                head_viewPager.setCurrentItem(head_viewPager.getCurrentItem()+1);
+                            }
+                        });
+                    }
+
                 }
             }
         }).start();
@@ -246,6 +250,7 @@ public class RecommendFragment extends Fragment implements IRecommendView,View.O
 
     @Override
     public void initScoll(List<ScollBean> list) {
+        Toast.makeText(getActivity(), "jiazaichenggong", Toast.LENGTH_SHORT).show();
         imageViews.clear();
         for (int i = 0; i < 4; i++) {
             ImageView imageView=new ImageView(getContext());
@@ -253,7 +258,9 @@ public class RecommendFragment extends Fragment implements IRecommendView,View.O
             Picasso.with(getContext()).load(list.get(i).getPic()).into(imageView);
             imageViews.add(imageView);
         }
+        head_viewPager.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        autoupdateViewPager();
     }
 
     @Override

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.qianfeng.maotuananimation.R;
 import com.qianfeng.maotuananimation.detailacitivity.adapter.RvDtAdapter;
@@ -69,7 +68,7 @@ public class DetailsActivity extends AppCompatActivity {
         presenter.start(url, new ICallBackDetail() {
             @Override
             public void onFailed(String failStr) {
-                Toast.makeText(DetailsActivity.this, "网络连接失败", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(DetailsActivity.this, "网络连接失败", Toast.LENGTH_SHORT).show();
                 setVisiable(false);
             }
 
@@ -102,6 +101,7 @@ public class DetailsActivity extends AppCompatActivity {
             ib.setVisibility(View.VISIBLE);
             tv.setVisibility(View.VISIBLE);
         }
+
     }
 
     public void btnRefresh(View view) {
