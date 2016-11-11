@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qianfeng.maotuananimation.BaseInterface.view.fragment.TuanFragment;
 import com.qianfeng.maotuananimation.Content.view.Fragment.ContentFragment;
 
 import java.util.ArrayList;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         line4.setOnClickListener(this);
         fragmentList=new ArrayList<>();
         fragmentList.add(new ContentFragment());
-        fragmentList.add(new Fragment());
+        fragmentList.add(new TuanFragment());
         fragmentList.add(new Fragment());
         fragmentList.add(new Fragment());
         currentFragment=fragmentList.get(0);

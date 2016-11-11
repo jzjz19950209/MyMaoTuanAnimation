@@ -34,7 +34,7 @@ public class SortFragment extends Fragment {
     List<ChannelBean> list;
     private RvAdapter adapter;
     private ProgressBar pb;
-
+    private List<String> details_title;
     @Override
     public void onAttach(final Context context) {
         super.onAttach(context);
@@ -46,6 +46,7 @@ public class SortFragment extends Fragment {
             public void onClickListener(View view, int position,String id) {
                 Intent intent = new Intent(getContext(), DetailsActivity.class);
                 intent.putExtra("id", id);
+                intent.putExtra("title",details_title.get(position));
                 getContext().startActivity(intent);
             }
 
@@ -87,10 +88,13 @@ public class SortFragment extends Fragment {
     }
 
     public void updateRv(List<ChannelBean> list) {
-        Log.d("bigname_log", "updateRv: " + list.size());
+        details_title=new ArrayList<>();
         pb.setVisibility(View.GONE);
         this.list.clear();
         this.list.addAll(list);
         adapter.notifyDataSetChanged();
+        for (int i = 0; i < list.size(); i++) {
+            details_title.add(list.get(i).getName());
+        }
     }
 }

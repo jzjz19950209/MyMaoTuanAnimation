@@ -325,6 +325,7 @@
 
             <LinearLayout
                 android:layout_width="0dp"
+                android:id="@+id/recommend_layout1"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -351,6 +352,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:id="@+id/recommend_layout2"
                 android:orientation="vertical">
 
                 <ImageView
@@ -374,6 +376,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:id="@+id/recommend_layout3"
                 android:orientation="vertical">
 
                 <ImageView
@@ -402,6 +405,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/recommend_layout4"
                 android:orientation="vertical">
 
                 <ImageView
@@ -425,6 +429,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:id="@+id/recommend_layout5"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -448,6 +453,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:id="@+id/recommend_layout6"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -487,118 +493,22 @@
                 android:textColor="@color/colorSortBtn"
                 android:layout_height="match_parent" />
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/dayRafresh_img1"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/item_default"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp" />
-
-                <TextView
-                    android:id="@+id/dayRefresh_tv1"
-                    android:text="猫团动漫"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/dayRafresh_img2"
-                    android:scaleType="centerCrop"
-                    android:layout_width="match_parent"
-                    android:src="@drawable/item_default"
-                    android:layout_height="100dp" />
-
-                <TextView
-                    android:id="@+id/dayRefresh_tv2"
-                    android:text="猫团动漫"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/dayRafresh_img3"
-                    android:scaleType="centerCrop"
-                    android:layout_width="match_parent"
-                    android:src="@drawable/item_default"
-                    android:layout_height="100dp" />
-
-                <TextView
-                    android:id="@+id/dayRefresh_tv3"
-                    android:text="猫团动漫"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/dayRafresh_img4"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/item_default"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp" />
-
-                <TextView
-                    android:id="@+id/dayRefresh_tv4"
-                    android:text="猫团动漫"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2" />
-            </LinearLayout>
-        </LinearLayout>
         <GridLayout
             android:layout_width="match_parent"
-            android:columnCount="4"
             android:id="@+id/gridLayout"
-            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_height="wrap_content">
         </GridLayout>
-        <Button
+        <TextView
             android:layout_width="match_parent"
             android:text="下拉全部"
             android:gravity="center"
+            android:background="@color/colorSearchBtn"
+            android:id="@+id/loadMore"
             android:textSize="20dp"
             android:textColor="@color/colorSortBtn"
-            android:layout_height="wrap_content" />
+            android:layout_height="30dp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp">
@@ -629,6 +539,8 @@
         <!--</HorizontalScrollView>-->
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:scrollbars="none"
             android:id="@+id/recyclerview_horizontal"
             android:layout_height="150dp">
@@ -636,6 +548,7 @@
         <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 

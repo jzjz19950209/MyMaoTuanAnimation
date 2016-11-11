@@ -162,10 +162,12 @@ public class ParseJson {
                 String id=rec_content.getJSONObject(i).getString("id");
                 String name=rec_content.getJSONObject(i).getString("name");
                 String pic=rec_content.getJSONObject(i).getString("pic");
+                String url=rec_content.getJSONObject(i).getString("url");
                 rec_contentBean=new Rec_contentBean();
                 rec_contentBean.setId(id);
                 rec_contentBean.setName(name);
                 rec_contentBean.setPic(pic);
+                rec_contentBean.setUrl(url);
                 rec_contentBeanList.add(rec_contentBean);
             }
 

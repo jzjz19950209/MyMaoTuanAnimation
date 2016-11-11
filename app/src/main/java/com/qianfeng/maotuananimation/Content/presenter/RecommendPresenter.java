@@ -81,5 +81,27 @@ public class RecommendPresenter {
 
                     }
                 });
+                iDataRecommend.getGameCarousel(new OnLoad_T_Listener() {
+                    @Override
+                    public void onRespond(List<T_Bean> list) {
+                        iRecommendView.initGameCarousel(list);
+                    }
+
+                    @Override
+                    public void onFailure(String msg) {
+
+                    }
+                });
+                iDataRecommend.getDayVideo(new OnLoad_T_Listener() {
+                    @Override
+                    public void onRespond(List<T_Bean> list) {
+                        iRecommendView.initDayVideo(list);
+                    }
+
+                    @Override
+                    public void onFailure(String msg) {
+
+                    }
+                });
     }
 }
